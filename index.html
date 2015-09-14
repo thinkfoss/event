@@ -70,6 +70,15 @@ $(document).ready(function() {
     });
 });
 </script>
+<script type="text/javascript">//<![CDATA[
+$(window).load(function(){
+var $select = $('#program');
+$('a[href="register.php"]').click(function () {
+    $select.val( $(this).data('select') );
+});
+});//]]> 
+
+</script>
 
     </head>
 
@@ -378,7 +387,7 @@ $(document).ready(function() {
 							</div>
 							<ul>
 								<li>Amrita Students</li>
-								<li><a  href="register.php?type=industrial" class="overlayLink">register</a></li>
+								<li><a  href="register.php" data-select="am_student" class="overlayLink">register</a></li>
 							</ul>
 						</div>
 					</div>
@@ -391,7 +400,7 @@ $(document).ready(function() {
 							</div>
 							<ul>
 								<li>Non-Amrita Students</li>
-								<li><a  href="register.php?type=industrial" class="overlayLink">register</a></li>
+								<li><a  href="register.php" data-select="student" class="overlayLink">register</a></li>
 							</ul>
 						</div>
 					</div>
@@ -404,12 +413,14 @@ $(document).ready(function() {
 							</div>
 							<ul>
 								<li>Industrial</li>
-								<li><a href="register.php?type=industrial" class="overlayLink">register</a></li>
+								<li><a href="register.php" data-select="industrial" onclick="myFunction()" class="overlayLink">register</a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
+			
+			
 			
 			
 			
@@ -461,10 +472,9 @@ $(document).ready(function() {
 
                         <div class="form-group">
                             <select class="form-control" name="program" id="program" required>
-                                <option readonly>Category</option>
-       							<option>Amrita Student: 200</option>
-                                <option>Non-Amrita Student: 300</option>
-                                <option>Industrial: 500</option>
+       							<option value="am_student">Amrita Student: 200</option>
+                                <option value="student">Non-Amrita Student: 300</option>
+                                <option value="industrial">Industrial: 500</option>
                             </select>
                         </div>
                     </div>
