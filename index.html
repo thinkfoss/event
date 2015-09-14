@@ -40,6 +40,45 @@
 
 		<!-- Modernizer Script for old Browsers -->
         <script src="js/modernizr-2.6.2.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Varela+Round|Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+$(document).ready(function() {
+    $("#loginLink").click(function( event ){
+           event.preventDefault();
+           $(".overlay1").fadeToggle("fast");
+     });
+    
+    $(".overlayLink").click(function(event){
+        event.preventDefault();
+        var action = $(this).attr('data-action');
+        
+        $("#loginTarget").load("ajax/" + action);
+        
+        $(".overlay1").fadeToggle("fast");
+    });
+    
+    $(".close").click(function(){
+        $(".overlay1").fadeToggle("fast");
+    });
+    
+    $(document).keyup(function(e) {
+        if(e.keyCode == 27 && $(".overlay1").css("display") != "none" ) { 
+            event.preventDefault();
+            $(".overlay1").fadeToggle("fast");
+        }
+    });
+});
+</script>
+<script type="text/javascript">//<![CDATA[
+$(window).load(function(){
+var $select = $('#type');
+$('a[href="register.php"]').click(function () {
+    $select.val( $(this).data('select') );
+});
+});//]]> 
+
+</script>
 
     </head>
 
@@ -85,6 +124,7 @@
                         <li><a href="#portfolio">About Us</a></li>
                         <li><a href="#testimonials">Speakers</a></li>
                         <li><a href="#price">price</a></li>
+                        <li><a href="#faq">faq</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
@@ -348,7 +388,7 @@
 							</div>
 							<ul>
 								<li>Amrita Students</li>
-								<li><a href="#">register</a></li>
+								<li><a  href="register.php" data-select="am_student" class="overlayLink">register</a></li>
 							</ul>
 						</div>
 					</div>
@@ -361,7 +401,7 @@
 							</div>
 							<ul>
 								<li>Non-Amrita Students</li>
-								<li><a href="#">register</a></li>
+								<li><a  href="register.php" data-select="student" class="overlayLink">register</a></li>
 							</ul>
 						</div>
 					</div>
@@ -374,13 +414,20 @@
 							</div>
 							<ul>
 								<li>Industrial</li>
-								<li><a href="#">register</a></li>
+								<li><a href="register.php" data-select="industrial" onclick="myFunction()" class="overlayLink">register</a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
-			<section id="registration" class="section registration">
+			
+			
+			
+			
+			
+			<section id="registration" class="overlay1" style="display: none;">
+			<div class="login-wrapper">
+        <div class="login-content" id="loginTarget">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -399,11 +446,11 @@
                     </div>
                     <div class="col-sm-6">
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="First Name" id="fname" name="fname" required>
+                            <input type="text" class="form-control" placeholder="First Name" id="fname" name="firstname" required>
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Last Name" id="lname" name="lname" required>
+                            <input type="text" class="form-control" placeholder="Last Name" id="lname" name="lastname" required>
                         </div>
 
                         <div class="form-group">
@@ -411,29 +458,40 @@
                         </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Phone" id="cell" name="cell" required>
+                            <input type="text" class="form-control" placeholder="Phone" id="cell" name="phone" required>
                         </div>
                     </div>
 
                     <div class="col-sm-6">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Address" id="address" name="address" required>
-                        </div>
+                        
+                       <div class="amrita" style="display:none;" >
+	                        <div class="form-group">
+	                            <select class="form-control" name="college" id="college" required>
+									<option value="am_student">Amritpuri Campus</option>
+	                                <option value="student">Banglore Campus</option>
+	                                <option value="industrial">Ettimadai Campus</option>
+	                            </select>
+	                        </div>
+
+	                        <div class="form-group">
+	                            <input type="text" class="form-control" value="AM.EN." id="college_id" name="college_id" required>
+	                        </div>
+	                       </div>
+                        <div class="amrita" style="display:none;" >
+	                        <div class="form-group">
+	                            <input type="text" class="form-control" placeholder="College" id="college" name="college" required>
+	                        </div>
+                       </div>
+                       <div class="form-group">
+		                       <input type="radio" name="sex" value="male">Male<br>
+		                       <input type="radio" name="sex" value="female">Female
+                       </div>
 
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Zip Code" id="zip" name="zip" required>
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="City" id="city" name="city" required>
-                        </div>
-
-                        <div class="form-group">
-                            <select class="form-control" name="program" id="program" required>
-                                <option readonly>Category</option>
-       							<option>Amrita Student: 200</option>
-                                <option>Non-Amrita Student: 300</option>
-                                <option>Industrial: 500</option>
+                            <select class="form-control" name="type" id="type" required>
+       							<option value="am_student">Amrita Student: 200</option>
+                                <option value="student">Non-Amrita Student: 300</option>
+                                <option value="industrial">Industrial: 500</option>
                             </select>
                         </div>
                     </div>
@@ -443,6 +501,9 @@
                 </div>
                         	<br><p style="text-align: center">*Food and Accomodation extra</p>
 
+            </div>
+    </div>
+</div>
             </form>
         </div>
     </section>
@@ -472,6 +533,91 @@
 			</div>
 		</section>
 		<!-- end Social section -->
+		
+		 <section id="faq" class="section faq">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="section-title">FAQs</h3>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                        
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                <h4 class="panel-title">
+                                    <a class="faq-toggle collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">What is ThinkFOSS2.0?</a>
+                                </h4>
+                            </div>
+
+                            <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                                <div class="panel-body">
+                                    <p>ThinkFOSS2.0 is a platform for open source contributors and enthusiasts to meet up, share their knowledge, contribute, learn, play, and most importantly have fun. It is organized to promote the use of free and open source software and technologies. It is the perfect arena for collaboration and exchange of ideas, skills, thoughts among like minded people who are passionate about open source.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingTwo">
+                                <h4 class="panel-title">
+                                    <a class="faq-toggle collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Who can attend ThinkFOSS2.0 ?</a>
+                                </h4>
+                            </div>
+
+                            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                                <div class="panel-body">
+                                <p>Anyone who is interested in exploring the wonders in the world of Open Source are most welcome to attend.</p>
+                                </div>
+                            </div>
+                        </div>
+  
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingThree">
+                                <h4 class="panel-title">
+                                    <a class="faq-toggle collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Is there a Registration fee?</a>
+                                </h4>
+                            </div>
+
+                            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                                <div class="panel-body">
+                                <p>Yes. If you are a student of Amrita University, then you have registration fees of ₹200 per person. If you are a non-Amritian, then you have to pay an amount of ₹300 per person. If you don’t belong to either of the above groups, then you  have a registration amount of ₹500 per person.</p>
+                                </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingFour">
+                                <h4 class="panel-title">
+                                    <a class="faq-toggle collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour"> Is there any pre-requisites?</a>
+                                </h4>
+                            </div>
+
+                            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                                <div class="panel-body">
+                                <p>Those who are to attend the conference should carry their ID with them “A mind to learn something new with a passion to Open Source”.Recommended: Linux installed laptop (We will help you install linux in case if you don’t have)Knowledge in github</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="panel panel-default">
+                            <div class="panel-heading" role="tab" id="headingFive">
+                                <h4 class="panel-title">
+                                    <a class="faq-toggle collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive"> I have specific questions that are not addressed here. Who can help me ?</a>
+                                </h4>
+                            </div>
+
+                            <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
+                                <div class="panel-body">
+                                </div>
+                                <p>You may email us (see below).</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
 
 		<!-- Contact section -->
 		<section id="contact" >
