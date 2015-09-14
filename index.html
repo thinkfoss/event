@@ -40,6 +40,126 @@
 
 		<!-- Modernizer Script for old Browsers -->
         <script src="js/modernizr-2.6.2.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Varela+Round|Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+$(document).ready(function() {
+    $("#loginLink").click(function( event ){
+           event.preventDefault();
+           $(".overlay1").fadeToggle("fast");
+     });
+    
+    $(".overlayLink").click(function(event){
+        event.preventDefault();
+        var action = $(this).attr('data-action');
+        
+        $("#loginTarget").load("ajax/" + action);
+        
+        $(".overlay1").fadeToggle("fast");
+    });
+    
+    $(".close").click(function(){
+        $(".overlay1").fadeToggle("fast");
+    });
+    
+    $(document).keyup(function(e) {
+        if(e.keyCode == 27 && $(".overlay1").css("display") != "none" ) { 
+            event.preventDefault();
+            $(".overlay1").fadeToggle("fast");
+        }
+    });
+});
+</script>
+<style>
+/*
+*    RESET
+*/
+*{
+    box-sizing: border-box;
+    margin: 0;
+    outline: none;
+    padding: 0;
+}
+
+*:after,
+*:before {
+    box-sizing: border-box;
+}
+
+/*
+*    GLOBAL
+*/
+html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    background-color: #f3f3f3;
+    color: rgb(165,165,165);
+    font-family: "Open Sans", Arial, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+a.close {
+    background-color: rgb(204,204,204);
+    border-radius: 50%;
+    color: rgb(255,255,255);
+    display: block;
+    font-family: 'Varela Round', sans-serif;
+    font-size: .8em;
+    padding: .2em .5em;
+    position: absolute;
+    top: 1.25rem;
+    transition: all 400ms ease;
+    right: 1.25rem;
+}
+    
+    a.close:hover {
+        background-color: #1bc5b3;
+        cursor: pointer;
+    }
+
+/*
+*    LOG-IN BOX
+*/
+div.overlay1 {
+    background-color: rgba(0,0,0,.25);
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+    div.overlay1 > div.login-wrapper {
+        align-self: center;
+        background-color: rgba(0,0,0,.25);
+        border-radius: 2px;
+        padding: 6px;
+        width: 450px;
+    }
+    
+        div.overlay1 > div.login-wrapper > div.login-content {
+            background-color: rgb(255,255,255);
+            border-radius: 2px;
+            padding: 24px;    
+            position: relative;
+        }
+        
+            div.overlay1 > div.login-wrapper > div.login-content > h3 {
+                color: rgb(0,0,0);
+                font-family: 'Varela Round', sans-serif;
+                font-size: 1.8em;
+                margin: 0 0 1.25em;
+                padding: 0;
+            }
+
+</style>
 
     </head>
 
@@ -348,7 +468,7 @@
 							</div>
 							<ul>
 								<li>Amrita Students</li>
-								<li><a href="#">register</a></li>
+								<li><a  href="register.php?type=industrial" class="overlayLink">register</a></li>
 							</ul>
 						</div>
 					</div>
@@ -361,7 +481,7 @@
 							</div>
 							<ul>
 								<li>Non-Amrita Students</li>
-								<li><a href="#">register</a></li>
+								<li><a  href="register.php?type=industrial" class="overlayLink">register</a></li>
 							</ul>
 						</div>
 					</div>
@@ -374,13 +494,18 @@
 							</div>
 							<ul>
 								<li>Industrial</li>
-								<li><a href="#">register</a></li>
+								<li><a href="register.php?type=industrial" class="overlayLink">register</a></li>
 							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
-			<section id="registration" class="section registration">
+			
+			
+			
+			<section id="registration" class="overlay1" style="display: none;">
+			<div class="login-wrapper">
+        <div class="login-content" id="loginTarget">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -439,6 +564,9 @@
                 </div>
                         	<br><p style="text-align: center">*Food and Accomodation extra</p>
 
+            </div>
+    </div>
+</div>
             </form>
         </div>
     </section>
