@@ -48,22 +48,22 @@ $(document).ready(function() {
            event.preventDefault();
            $(".overlay1").fadeToggle("fast");
      });
-    
+
     $(".overlayLink").click(function(event){
         event.preventDefault();
         var action = $(this).attr('data-action');
-        
+
         $("#loginTarget").load("ajax/" + action);
-        
+
         $(".overlay1").fadeToggle("fast");
     });
-    
+
     $(".close").click(function(){
         $(".overlay1").fadeToggle("fast");
     });
-    
+
     $(document).keyup(function(e) {
-        if(e.keyCode == 27 && $(".overlay1").css("display") != "none" ) { 
+        if(e.keyCode == 27 && $(".overlay1").css("display") != "none" ) {
             event.preventDefault();
             $(".overlay1").fadeToggle("fast");
         }
@@ -76,7 +76,7 @@ var $select = $('#type');
 $('a[href="register.php"]').click(function () {
     $select.val( $(this).data('select') );
 });
-});//]]> 
+});//]]>
 
 </script>
 
@@ -420,11 +420,11 @@ $('a[href="register.php"]').click(function () {
 					</div>
 				</div>
 			</div>
-			
-			
-			
-			
-			
+
+
+
+
+
 			<section id="registration" class="overlay1" style="display: none;">
 			<div class="login-wrapper">
         <div class="login-content" id="loginTarget">
@@ -432,7 +432,7 @@ $('a[href="register.php"]').click(function () {
             <div class="row">
                 <div class="col-md-12">
                   <div class="sec-title text-center wow animated fadeInDown">
-                   <br> <h3 class="section-title">Registration</h3>
+                   <br> <h2 class="section-title"> REGISTRATION </h2>
                    <div class="col-md-4 wow animated fadeInUp">
                    </div>
                  </div>
@@ -463,7 +463,7 @@ $('a[href="register.php"]').click(function () {
                     </div>
 
                     <div class="col-sm-6">
-                        
+
                        <div class="amrita" style="display:none;" >
 	                        <div class="form-group">
 	                            <select class="form-control" name="college" id="college" required>
@@ -533,18 +533,20 @@ $('a[href="register.php"]').click(function () {
 			</div>
 		</section>
 		<!-- end Social section -->
-		
+
 		 <section id="faq" class="section faq">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h3 class="section-title">FAQs</h3>
+                  <div class="sec-title text-center wow animated fadeInDown">
+                    <h2 class="section-title">FAQ's</h2>
+                  </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-md-12">
                     <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-                        
+
                         <div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="headingOne">
                                 <h4 class="panel-title">
@@ -572,11 +574,11 @@ $('a[href="register.php"]').click(function () {
                                 </div>
                             </div>
                         </div>
-  
+
                         <div class="panel panel-default">
                             <div class="panel-heading" role="tab" id="headingThree">
                                 <h4 class="panel-title">
-                                    <a class="faq-toggle collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Is there a Registration fee?</a>
+                                    <a class="faq-toggle collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Is there a Registration fee ?</a>
                                 </h4>
                             </div>
 
