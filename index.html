@@ -40,6 +40,45 @@
 
 		<!-- Modernizer Script for old Browsers -->
         <script src="js/modernizr-2.6.2.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Varela+Round|Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+<script src="http://code.jquery.com/jquery-latest.min.js"></script>
+<script>
+$(document).ready(function() {
+    $("#loginLink").click(function( event ){
+           event.preventDefault();
+           $(".overlay1").fadeToggle("fast");
+     });
+    
+    $(".overlayLink").click(function(event){
+        event.preventDefault();
+        var action = $(this).attr('data-action');
+        
+        $("#loginTarget").load("ajax/" + action);
+        
+        $(".overlay1").fadeToggle("fast");
+    });
+    
+    $(".close").click(function(){
+        $(".overlay1").fadeToggle("fast");
+    });
+    
+    $(document).keyup(function(e) {
+        if(e.keyCode == 27 && $(".overlay1").css("display") != "none" ) { 
+            event.preventDefault();
+            $(".overlay1").fadeToggle("fast");
+        }
+    });
+});
+</script>
+<script type="text/javascript">//<![CDATA[
+$(window).load(function(){
+var $select = $('#type');
+$('a[href="register.php"]').click(function () {
+    $select.val( $(this).data('select') );
+});
+});//]]> 
+
+</script>
 
     </head>
 
@@ -349,7 +388,7 @@
 							</div>
 							<ul>
 								<li>Amrita Students</li>
-								<li><a href="#">register</a></li>
+								<li><a  href="register.php" data-select="am_student" class="overlayLink">register</a></li>
 							</ul>
 						</div>
 					</div>
@@ -362,7 +401,7 @@
 							</div>
 							<ul>
 								<li>Non-Amrita Students</li>
-								<li><a href="#">register</a></li>
+								<li><a  href="register.php" data-select="student" class="overlayLink">register</a></li>
 							</ul>
 						</div>
 					</div>
@@ -375,14 +414,95 @@
 							</div>
 							<ul>
 								<li>Industrial</li>
-								<li><a href="#">register</a></li>
+								<li><a href="register.php" data-select="industrial" onclick="myFunction()" class="overlayLink">register</a></li>
 							</ul>
 						</div>
 					</div>
-
 				</div>
-							<br><p style="text-align: center">*Food and Accomodation extra</p>
 			</div>
+			
+			
+			
+			
+			
+			<section id="registration" class="overlay1" style="display: none;">
+			<div class="login-wrapper">
+        <div class="login-content" id="loginTarget">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                   <br> <h3 class="section-title">Registration</h3>
+                </div>
+            </div>
+
+            <form action="#" id="registration-form">
+                <div class="row">
+                    <div class="col-md-12" id="registration-msg" style="display:none;">
+                        <div class="alert"></div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="First Name" id="fname" name="firstname" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Last Name" id="lname" name="lastname" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Phone" id="cell" name="phone" required>
+                        </div>
+                    </div>
+
+                    <div class="col-sm-6">
+                        
+                       <div class="amrita" style="display:none;" >
+	                        <div class="form-group">
+	                            <select class="form-control" name="college" id="college" required>
+									<option value="am_student">Amritpuri Campus</option>
+	                                <option value="student">Banglore Campus</option>
+	                                <option value="industrial">Ettimadai Campus</option>
+	                            </select>
+	                        </div>
+
+	                        <div class="form-group">
+	                            <input type="text" class="form-control" value="AM.EN." id="college_id" name="college_id" required>
+	                        </div>
+	                       </div>
+                        <div class="amrita" style="display:none;" >
+	                        <div class="form-group">
+	                            <input type="text" class="form-control" placeholder="College" id="college" name="college" required>
+	                        </div>
+                       </div>
+                       <div class="form-group">
+		                       <input type="radio" name="sex" value="male">Male<br>
+		                       <input type="radio" name="sex" value="female">Female
+                       </div>
+
+                        <div class="form-group">
+                            <select class="form-control" name="type" id="type" required>
+       							<option value="am_student">Amrita Student: 200</option>
+                                <option value="student">Non-Amrita Student: 300</option>
+                                <option value="industrial">Industrial: 500</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mt20">
+                    <button type="submit" class="btn btn-blue btn-effect" id="registration-submit-btn">Submit</button>
+                </div>
+                        	<br><p style="text-align: center">*Food and Accomodation extra</p>
+
+            </div>
+    </div>
+</div>
+            </form>
+        </div>
+    </section>
 
 		</section>
 		<!-- end Price section -->
@@ -409,6 +529,10 @@
 			</div>
 		</section>
 		<!-- end Social section -->
+<<<<<<< HEAD
+=======
+		
+>>>>>>> 042435dc6573370f72ed75f4824f421a76299a95
 		 <section id="faq" class="section faq">
         <div class="container">
             <div class="row">
@@ -492,6 +616,10 @@
                 </div>
             </div>
     </section>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 042435dc6573370f72ed75f4824f421a76299a95
 
 		<!-- Contact section -->
 		<section id="contact" >
