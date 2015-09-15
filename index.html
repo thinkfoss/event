@@ -464,14 +464,16 @@ $('a[href="register.php"]').click(function () {
                        <div class="amrita" style="display:none;" >
 	                        <div class="form-group">
 	                            <select class="form-control" name="college" id="college" required>
-									<option value="am_student">Amritpuri Campus</option>
-	                                <option value="student">Banglore Campus</option>
-	                                <option value="industrial">Ettimadai Campus</option>
+									<option value="amritapuri">Amritpuri Campus</option>
+	                                <option value="bangalore">Banglore Campus</option>
+	                                <option value="coimbatore">Ettimadai Campus</option>
+	                                <option value="kochi">Kochi Campus</option>
+	                                <option value="mysore">Mysore Campus</option>
 	                            </select>
 	                        </div>
 
 	                        <div class="form-group">
-	                            <input type="text" class="form-control" value="AM.EN." id="college_id" name="college_id" required>
+	                            <input type="text" class="form-control" value="AM." id="college_id" name="college_id" required>
 	                        </div>
 	                       </div>
                         <div class="amrita" style="display:none;" >
@@ -486,6 +488,13 @@ $('a[href="register.php"]').click(function () {
  									<input type="radio" id="radio02" name="radio" />
  									<label for="radio02"><span></span>Female</label>
 								</div>
+						<div class="form-group">
+							<form action="">
+								<label class="checkbox-inline"><input type="checkbox" value="food">Food</label>
+								<label class="checkbox-inline"><input type="checkbox" value="accomodation">Accomodation</label>
+							</form> 
+						</div>
+
                        </div>
                         <div class="form-group">
                             <select class="form-control" name="type" id="type" required>
