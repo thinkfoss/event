@@ -944,6 +944,7 @@ ul.external li a:hover {
 
 div .radio-btn{
   margin:0 0 0.75em 0;
+  padding: 1px;
 }
 
 input[type="radio"] {
@@ -972,7 +973,6 @@ input[type="radio"] + label span {
 input[type="radio"]:checked + label span{
      background-color:#009EE3;
 }
-
 input[type="radio"] + label span,
 input[type="radio"]:checked + label span {
   -webkit-transition:background-color 0.4s linear;
