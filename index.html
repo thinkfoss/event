@@ -480,10 +480,13 @@ $('a[href="register.php"]').click(function () {
 	                        </div>
                        </div>
                        <div class="form-group">
-		                       <label class="radio-inline"><input type="radio" name="sex" value="male">Male<br></label>
-		                       <label class="radio-inline"><input type="radio" name="sex" value="female">Female</label>
+		                       <div class ="radio-btn">
+  									<input type="radio" id="radio01" name="radio" />
+  									<label for="radio01"><span></span>Male</label>
+ 									<input type="radio" id="radio02" name="radio" />
+ 									<label for="radio02"><span></span>Female</label>
+								</div>
                        </div>
-
                         <div class="form-group">
                             <select class="form-control" name="type" id="type" required>
        							<option value="am_student">Amrita Student: 200</option>
@@ -616,10 +619,6 @@ $('a[href="register.php"]').click(function () {
                 </div>
             </div>
     </section>
-<<<<<<< HEAD
-=======
-
->>>>>>> 042435dc6573370f72ed75f4824f421a76299a95
 
 		<!-- Contact section -->
 		<section id="contact" >

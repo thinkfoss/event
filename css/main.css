@@ -942,22 +942,45 @@ ul.external li a:hover {
     border: 2px solid #008ECC;
 }
 
-
-/*=================================================================
-	Contact
-==================================================================*/
-
-.input-field {
-    margin-bottom: 10px;
+div .radio-btn{
+  margin:0 0 0.75em 0;
 }
 
-.form-control {
-    border: 1px solid #ececec;
-    border-radius: 0;
-    box-shadow: none;
-    color: #818181;
-    font-size: 16px;
-    height: 50px;
+input[type="radio"] {
+    display:none;
+}
+input[type="radio"] + label {
+    color: black;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+}
+input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    cursor:pointer;
+    -moz-border-radius:  50%;
+    border-radius:  50%;
+}
+
+input[type="radio"] + label span {
+     background-color:black;
+}
+
+input[type="radio"]:checked + label span{
+     background-color:#009EE3;
+}
+
+input[type="radio"] + label span,
+input[type="radio"]:checked + label span {
+  -webkit-transition:background-color 0.4s linear;
+  -o-transition:background-color 0.4s linear;
+  -moz-transition:background-color 0.4s linear;
+  transition:background-color 0.4s linear;
+}
+/*================================================================
 }
 
 textarea.form-control {
