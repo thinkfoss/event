@@ -96,7 +96,7 @@ $('a[href="register.php"]').click(function () {
         <!--
         Fixed Navigation
         ==================================== -->
-        <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header" style="background-color: #009ee3">
+        <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header" style="background-color:#009ee3">
             <div class="container" >
                 <div class="navbar-header">
                     <!-- responsive nav button -->
@@ -114,7 +114,7 @@ $('a[href="register.php"]').click(function () {
                 </div>
 
 				<!-- main nav -->
-                <nav class="collapse navbar-collapse navbar-right" role="navigation" >
+                <nav class="collapse navbar-collapse navbar-right" role="navigation"  >
                     <ul id="nav" class="nav navbar-nav" >
                         <li><a href="#body">Home</a></li>
                         <li><a href="#service">Goals</a></li>
@@ -140,7 +140,7 @@ $('a[href="register.php"]').click(function () {
         ==================================== -->
 
 		<section id="home-slider">
-            <div id="slider" class="sl-slider-wrapper">
+            <div id="slider" class="sl-slider-wrapper" >
 
 						<div class="bg-img bg-img-1"></div>
 
@@ -158,10 +158,9 @@ $('a[href="register.php"]').click(function () {
                 <nav class="navbar navbar-fixed-bottom" style="background-color: #009ee3; color: white">
                     <div class="container" style="padding-top: 10px">
                         <div class="pull-left fnav">
-                            <p>NO RIGHTS RESERVED. GPL v3.0. Designed and Maintained by <a href="http://foss.amrita.ac.in" target="_blank">FOSS@Amrita</a>. Bugs ? Please report at our <a href="http://phab.thinkfoss.com" target="_blank">Phabricator</a></p>
+                            	<p>Why Sponsor Us?</p>
                         </div>
                         <div class="pull-right fnav">
-                               <a href="http://www.thinkfoss.com/index.php#tf-contact" target="_blank"><i class="fa fa-envelope"></i></a>
                                <a href="http://facebook.com/thinkfoss" target="_blank"><i class="fa fa-facebook"></i></a>
                                <a href="https://plus.google.com/102089872995784319229/about" target="_blank"><i class="fa fa-google-plus"></i></a>
                                <a href="https://twitter.com/thinkfoss" target="_blank"><i class="fa fa-twitter"></i></a>
@@ -334,163 +333,23 @@ $('a[href="register.php"]').click(function () {
 			<div class="row">
                   <div class="sec-title text-center wow animated fadeInDown">
 			    	<br> <h2 class="section-title"> REGISTRATION </h2>
-				<div class="col-md-4 wow animated fadeInLeft"data-wow-delay="0.4s">
-          <div align="right" style="padding-left:10em">
-					<button type="submit" class="btn btn-blue btn-effect" id="registration-submit-btn"><i class="fa fa-graduation-cap fa-5x "></i><br>Register As Participant</button>
-				</div>
-      </div>
-				<div class="col-md-4 wow animated fadeInRight" data-wow-delay="0.8s">
-          <div align="right" style="padding-left:20em">
-					<button type="submit" class="btn btn-blue btn-effect" id="registration-submit-btn"><i class="fa fa-bullhorn fa-5x "></i><br>Register As Speaker</button>
-				</div>
-      </div>
+						<div class="col-md-4 wow animated fadeInLeft"data-wow-delay="0.4s">
+          					<div align="right" style="padding-left:10em">
+								<a href="http://conf-thinkfoss.doattend.com" <button class="btn btn-blue btn-effect" id="registration-submit-btn"><i class="fa fa-graduation-cap fa-5x "></i><br>Register As Participant</button></a>
+							</div>
+      					</div>
+						<div class="col-md-4 wow animated fadeInRight" data-wow-delay="0.8s">
+         			 		<div align="right" style="padding-left:20em">
+								<a href="http://goo.gl/forms/7ye2Z8JQT2"><button type="submit" class="btn btn-blue btn-effect" id="registration-submit-btn"><i class="fa fa-bullhorn fa-5x "></i><br>Register As Speaker</button></a>
+							</div>
+     					</div>
+					</div>
 			</div>
-		</div>
-
-
-		</section>
-		<section id="price">
-			<div class="container">
-				<div class="row">
-					<div class="sec-title text-center wow animated fadeInDown">
-					</div>
-
-					<div class="col-md-4 wow animated fadeInUp">
-						<div class="price-table text-center">
-							<div class="value">
-								<span><i class="fa fa-inr fa-2x "></i></span>
-								<span>200</span><br>
-							</div>
-							<ul>
-								<li>Amrita Students</li>
-								<li><a  href="register.php" data-select="am_student" class="overlayLink">register</a></li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="col-md-4 wow animated fadeInUp" data-wow-delay="0.4s">
-						<div class="price-table text-center">
-							<div class="value">
-								<span><i class="fa fa-inr fa-2x "></i></span>
-								<span>300</span><br>
-							</div>
-							<ul>
-								<li>Non-Amrita Students</li>
-								<li><a  href="register.php" data-select="student" class="overlayLink">register</a></li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="col-md-4 wow animated fadeInUp" data-wow-delay="0.8s">
-						<div class="price-table text-center">
-							<div class="value">
-								<span><i class="fa fa-inr fa-2x "></i></span>
-								<span>500</span><br>
-							</div>
-							<ul>
-								<li>Industrial</li>
-								<li><a href="register.php" data-select="industrial" onclick="myFunction()" class="overlayLink">register</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-
-			<section id="registration" class="overlay1" style="display: none;">
-			<div class="login-wrapper">
-        <div class="login-content" id="loginTarget">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                   <div class="col-md-4 wow animated fadeInUp">
-                   </div>
-                 </div>
-                </div>
-                <br>
-                <br>
-            <form action="#" id="registration-form">
-                <div class="row">
-                    <div class="col-md-12" id="registration-msg" style="display:none;">
-                        <div class="alert"></div>
-                    </div>
-                    <div class="col-sm-6">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="First Name" id="fname" name="firstname" required>
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Last Name" id="lname" name="lastname" required>
-                        </div>
-
-                        <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Email" id="email" name="email" required>
-                        </div>
-
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Phone" id="cell" name="phone" required>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6">
-
-                       <div class="amrita" style="display:none;" >
-	                        <div class="form-group">
-	                            <select class="form-control" name="college" id="college" required>
-									                <option value="amritapuri">Amritpuri Campus</option>
-	                                <option value="bangalore">Banglore Campus</option>
-	                                <option value="coimbatore">Ettimadai Campus</option>
-	                                <option value="kochi">Kochi Campus</option>
-	                                <option value="mysore">Mysore Campus</option>
-	                            </select>
-	                        </div>
-
-	                        <div class="form-group">
-	                            <input type="text" class="form-control" value="AM." id="college_id" name="college_id" required>
-	                        </div>
-	                       </div>
-                        <div class="amrita" style="display:none;" >
-	                        <div class="form-group">
-	                            <input type="text" class="form-control" placeholder="College" id="college" name="college" required>
-	                        </div>
-                       </div>
-                       <div class="form-group">
-		                       <div class ="radio-btn">
-  									<input type="radio" id="radio01" name="radio" />
-  									<label for="radio01"><span></span>Male</label>
- 									<input type="radio" id="radio02" name="radio" />
- 									<label for="radio02"><span></span>Female</label>
-								</div>
-						<div class="form-group">
-								<form action="">
-									<label for="slideTwo"><input type="checkbox" value="food">Food</label>
-									<label for="slideTwo"><input type="checkbox" value="accomodation">Accomodation</label>
-								</form>
-						</div>
-
-                       </div>
-                        <div class="form-group">
-                            <select class="form-control" name="type" id="type" required>
-       							<option value="am_student">Amrita Student: 200</option>
-                                <option value="student">Non-Amrita Student: 300</option>
-                                <option value="industrial">Industrial: 500</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="text-center mt20">
-                    <button type="submit" class="btn btn-blue btn-effect" id="registration-submit-btn">Submit</button>
-                </div>
-                        	<br><p style="text-align: center">*Food and Accomodation extra</p>
-
-            </div>
-    </div>
-</div>
-            </form>
-        </div>
-    </section>
-
-		</section>
-		<!-- end Price section -->
+			<div style="text-align:center">
+		 	<br> *Food and Accomodation Extra
+		 	</div>
+		 </div>
+		</section>	
 
 		<!-- Social section -->
 		<section id="social" class="parallax">
