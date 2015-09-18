@@ -38,6 +38,7 @@
 		<!-- Main Stylesheet -->
         <link rel="stylesheet" href="css/main.css">
 
+
 		<!-- Modernizer Script for old Browsers -->
         <script src="js/modernizr-2.6.2.min.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Varela+Round|Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
@@ -95,8 +96,8 @@ $('a[href="register.php"]').click(function () {
         <!--
         Fixed Navigation
         ==================================== -->
-        <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header">
-            <div class="container">
+        <header id="navigation" class="navbar-inverse navbar-fixed-top animated-header" style="background-color:#009ee3">
+            <div class="container" >
                 <div class="navbar-header">
                     <!-- responsive nav button -->
 					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -108,17 +109,13 @@ $('a[href="register.php"]').click(function () {
 					<!-- /responsive nav button -->
 
 					<!-- logo -->
-					<h1 class="navbar-brand">
-						<a href="#body"><img style ="height:30px;color: #fff;
-	text-shadow: 0px 1px 0px #999, 0px 2px 0px #888, 0px 3px 0px #777, 0px 4px 0px #666, 0px 5px 0px #555, 0px 6px 0px #444, 0px 7px 0px #333, 0px 8px 7px #001135;
-	font: 80px 'ChunkFiveRegular';" src="img/logo.png">ThinkFOSS 2.0</a>
-					</h1>
+					<a class="navbar-brand" href="#" style="font-weight: bold; color:black">Think<span style="color:white">FOSS2.0</span></a>
 					<!-- /logo -->
                 </div>
 
 				<!-- main nav -->
-                <nav class="collapse navbar-collapse navbar-right" role="navigation">
-                    <ul id="nav" class="nav navbar-nav">
+                <nav class="collapse navbar-collapse navbar-right" role="navigation"  >
+                    <ul id="nav" class="nav navbar-nav" >
                         <li><a href="#body">Home</a></li>
                         <li><a href="#service">Goals</a></li>
                         <li><a href="#portfolio">About Us</a></li>
@@ -143,76 +140,36 @@ $('a[href="register.php"]').click(function () {
         ==================================== -->
 
 		<section id="home-slider">
-            <div id="slider" class="sl-slider-wrapper">
-
-				<div class="sl-slider">
-
-					<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="-25" data-slice2-rotation="-25" data-slice1-scale="2" data-slice2-scale="2">
+            <div id="slider" class="sl-slider-wrapper" >
 
 						<div class="bg-img bg-img-1"></div>
 
 						<div class="slide-caption">
                             <div class="caption-content">
-                                <h2 class="animated fadeInDown">ThinkFOSS 2.0</h2>
-                                <span class="animated fadeInDown">talk</span>
+                                <h2 class="sec-title"><span style=" font-weight: 600;"> Think</span><span style="font-weight: bold; color: #a6e1ec">FOSS 2.0</span></h2>
+									<h3 style="color: white; font-weight: bold">< talk| code | hack ></h3>  <br><br>
                                 <a href="#price" class="btn btn-blue btn-effect">Register NOW !</a>
                             </div>
                         </div>
 
-					</div>
 
-					<div class="sl-slide" data-orientation="vertical" data-slice1-rotation="10" data-slice2-rotation="-15" data-slice1-scale="1.5" data-slice2-scale="1.5">
 
-						<div class="bg-img bg-img-2"></div>
-						<div class="slide-caption">
-                            <div class="caption-content">
-                                <h2>ThinkFOSS 2.0</h2>
-                                <span>code</span>
-                                <a href="#price" class="btn btn-blue btn-effect">Register NOW </a>
-                            </div>
+
+                <nav class="navbar navbar-fixed-bottom" style="background-color: #009ee3; color: white">
+                    <div class="container" style="padding-top: 10px">
+                        <div class="pull-left fnav">
+                            	<p>Why Sponsor Us?</p>
                         </div>
-
-					</div>
-
-					<div class="sl-slide" data-orientation="horizontal" data-slice1-rotation="3" data-slice2-rotation="3" data-slice1-scale="2" data-slice2-scale="1">
-
-						<div class="bg-img bg-img-3"></div>
-						<div class="slide-caption">
-                            <div class="caption-content">
-                                <h2>ThinkFOSS 2.0</h2>
-                                <span>hack</span>
-                                <a href="#price 	" class="btn btn-blue btn-effect">Register NOW </a>
-                            </div>
+                        <div class="pull-right fnav">
+                               <a href="http://facebook.com/thinkfoss" target="_blank"><i class="fa fa-facebook"></i></a>
+                               <a href="https://plus.google.com/102089872995784319229/about" target="_blank"><i class="fa fa-google-plus"></i></a>
+                               <a href="https://twitter.com/thinkfoss" target="_blank"><i class="fa fa-twitter"></i></a>
                         </div>
-
-					</div>
-
-				</div><!-- /sl-slider -->
-
-                <!--
-                <nav id="nav-arrows" class="nav-arrows">
-                    <span class="nav-arrow-prev">Previous</span>
-                    <span class="nav-arrow-next">Next</span>
-                </nav>
-                -->
-
-                <nav id="nav-arrows" class="nav-arrows hidden-xs hidden-sm visible-md visible-lg">
-                    <a href="javascript:;" class="sl-prev">
-                        <i class="fa fa-angle-left fa-3x"></i>
-                    </a>
-                    <a href="javascript:;" class="sl-next">
-                        <i class="fa fa-angle-right fa-3x"></i>
-                    </a>
+                    </div>
                 </nav>
 
 
-				<nav id="nav-dots" class="nav-dots visible-xs visible-sm hidden-md hidden-lg">
-					<span class="nav-dot-current"></span>
-					<span></span>
-					<span></span>
-				</nav>
-
-			</div><!-- /slider-wrapper -->
+            </div><!-- /slider-wrapper -->
 		</section>
 
 
@@ -371,72 +328,24 @@ $('a[href="register.php"]').click(function () {
 		<!-- end Testimonial section -->
 
 		<!-- Price section -->
-		<section id="speaker-student">
+		<section id="price">
 		<div class="container">
 			<div class="row">
                   <div class="sec-title text-center wow animated fadeInDown">
 			    	<br> <h2 class="section-title"> REGISTRATION </h2>
-				<div class="col-md-4 wow animated fadeInLeft"data-wow-delay="0.4s">
-          <div align="right" style="padding-left:10em">
-					<button type="submit" class="btn btn-blue btn-effect" id="registration-submit-btn"><i class="fa fa-graduation-cap fa-5x "></i><br>Register As Participant</button>
-				</div>
-      </div>
-				<div class="col-md-4 wow animated fadeInRight" data-wow-delay="0.8s">
-          <div align="right" style="padding-left:20em">
-					<button type="submit" class="btn btn-blue btn-effect" id="registration-submit-btn"><i class="fa fa-bullhorn fa-5x "></i><br>Register As Speaker</button>
-				</div>
-      </div>
+						<div class="col-md-4 wow animated fadeInLeft"data-wow-delay="0.4s">
+          					<div align="right" style="padding-left:10em">
+								<a href="http://conf-thinkfoss.doattend.com" <button class="btn btn-blue btn-effect" id="registration-submit-btn"><i class="fa fa-graduation-cap fa-5x "></i><br>Register As Participant</button></a>
+							</div>
+      					</div>
+						<div class="col-md-4 wow animated fadeInRight" data-wow-delay="0.8s">
+         			 		<div align="right" style="padding-left:20em">
+								<a href="http://goo.gl/forms/7ye2Z8JQT2"><button type="submit" class="btn btn-blue btn-effect" id="registration-submit-btn"><i class="fa fa-bullhorn fa-5x "></i><br>Register As Speaker</button></a>
+							</div>
+     					</div>
+					</div>
 			</div>
-		</div>
-
-
-		</section>
-		<section id="price">
-			<div class="container">
-				<div class="row">
-					<div class="sec-title text-center wow animated fadeInDown">
-					</div>
-
-					<div class="col-md-4 wow animated fadeInUp">
-						<div class="price-table text-center">
-							<div class="value">
-								<span><i class="fa fa-inr fa-2x "></i></span>
-								<span>200</span><br>
-							</div>
-							<ul>
-								<li>Amrita Students</li>
-								<li><a  href="register.php" data-select="am_student" class="overlayLink">register</a></li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="col-md-4 wow animated fadeInUp" data-wow-delay="0.4s">
-						<div class="price-table text-center">
-							<div class="value">
-								<span><i class="fa fa-inr fa-2x "></i></span>
-								<span>300</span><br>
-							</div>
-							<ul>
-								<li>Non-Amrita Students</li>
-								<li><a  href="register.php" data-select="student" class="overlayLink">register</a></li>
-							</ul>
-						</div>
-					</div>
-
-					<div class="col-md-4 wow animated fadeInUp" data-wow-delay="0.8s">
-						<div class="price-table text-center">
-							<div class="value">
-								<span><i class="fa fa-inr fa-2x "></i></span>
-								<span>500</span><br>
-							</div>
-							<ul>
-								<li>Industrial</li>
-								<li><a href="register.php" data-select="industrial" onclick="myFunction()" class="overlayLink">register</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
+<<<<<<< HEAD
 
 
       <br>
@@ -539,6 +448,13 @@ $('a[href="register.php"]').click(function () {
 
 		</section>
 		<!-- end Price section -->
+=======
+			<div style="text-align:center">
+		 	<br> *Food and Accomodation Extra
+		 	</div>
+		 </div>
+		</section>
+>>>>>>> 3e0a4f14ca3715f9c116fe6754825c146f503abd
 
 		<!-- Social section -->
 		<section id="social" class="parallax">
@@ -567,7 +483,7 @@ $('a[href="register.php"]').click(function () {
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                  <div class="sec-title text-center wow animated bounceInUp">
+                  <div class="sec-title text-center wow animated bounceInUp" data-wow-delay="0.2s">
                     <h2 class="section-title">FAQ's</h2>
                   </div>
                 </div>
@@ -590,7 +506,7 @@ $('a[href="register.php"]').click(function () {
                             </div>
                         </div>
 
-                        <div class="panel panel-default wow animated bounceInRight">
+                        <div class="panel panel-default wow animated bounceInRight" data-wow-delay="0.6s">
                             <div class="panel-heading" role="tab" id="headingTwo">
                                 <h4 class="panel-title">
                                     <a class="faq-toggle collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">Who can attend ThinkFOSS2.0 ?</a>
@@ -604,7 +520,7 @@ $('a[href="register.php"]').click(function () {
                             </div>
                         </div>
 
-                        <div class="panel panel-default wow animated bounceInLeft">
+                        <div class="panel panel-default wow animated bounceInLeft" data-wow-delay="0.8s">
                             <div class="panel-heading" role="tab" id="headingThree">
                                 <h4 class="panel-title">
                                     <a class="faq-toggle collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">Is there a Registration fee ?</a>
@@ -617,14 +533,14 @@ $('a[href="register.php"]').click(function () {
                                 </div>
                         </div>
 
-                        <div class="panel panel-default wow animated bounceInRight">
+                        <div class="panel panel-default wow animated bounceInRight" data-wow-delay="1.0s">
                             <div class="panel-heading" role="tab" id="headingFour">
                                 <h4 class="panel-title">
                                     <a class="faq-toggle collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour"> Is there any pre-requisites?</a>
                                 </h4>
                             </div>
 
-                            <div id="collapseFour" class="panel-collapse collapse wow animated bounceInLeft" role="tabpanel" aria-labelledby="headingFour">
+                            <div id="collapseFour" class="panel-collapse collapse " role="tabpanel" aria-labelledby="headingFour">
                                 <div class="panel-body">
                                 <p> “A mind to learn something new with a passion to Open Source”.
                                 Recommended: Linux installed laptop (We will help you install linux in case if you don’t have)Knowledge in github</p>
@@ -632,7 +548,7 @@ $('a[href="register.php"]').click(function () {
                             </div>
                         </div>
 
-                        <div class="panel panel-default wow animated bounceInRight">
+                        <div class="panel panel-default wow animated bounceInRight" data-wow-delay="1.2s">
                             <div class="panel-heading" role="tab" id="headingFive">
                                 <h4 class="panel-title">
                                     <a class="faq-toggle collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive"> I have specific questions that are not addressed here. Who can help me ?</a>
@@ -645,6 +561,8 @@ $('a[href="register.php"]').click(function () {
                                 <p>You may email us (see below).</p>
                             </div>
                         </div>
+							</div>
+
                     </div>
                 </div>
             </div>
@@ -656,34 +574,48 @@ $('a[href="register.php"]').click(function () {
 				<div class="row">
 
 					<div class="sec-title text-center wow animated fadeInDown">
-						<h2>Contact</h2>
-						<p>Leave a Message</p>
+						<h2>Contact US</h2>
+						<p>Leave a Message, and we will get back to you soon</p>
 					</div>
 
 
-					<div class="col-md-7 contact-form wow animated fadeInLeft">
-						<form action="#" method="post">
-							<div class="input-field">
-								<input type="text" name="name" class="form-control" placeholder="Your Name...">
-							</div>
-							<div class="input-field">
-								<input type="email" name="email" class="form-control" placeholder="Your Email...">
-							</div>
-							<div class="input-field">
-								<input type="text" name="subject" class="form-control" placeholder="Subject...">
-							</div>
-							<div class="input-field">
-								<textarea name="message" class="form-control" placeholder="Messages..."></textarea>
-							</div>
-					       	<button type="submit" id="submit" class="btn btn-blue btn-effect">Send</button>
-						</form>
-					</div>
+					<div class="col-md-7 contact-form wow animated fadeInLeft well">
 
+						<form action="http://formspree.io/tony@thinkfoss.com" method="POST" >
+							<form class="form-inline">
+								<div class="form-group">
+									<label class="sr-only" for="exampleInputAmount">Your Name</label>
+									<div class="input-group">
+										<div class="input-group-addon"><i class="fa fa-user"></i> </div>
+										<input type="text" class="form-control" id="contact-name" placeholder="Your Name" name="name">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="sr-only"  for="exampleInputEmail1">Email id</label>
+									<div class="input-group">
+										<div class="input-group-addon"><i class="fa fa-envelope"></i> </div>
+										<input type="email" class="form-control" id="contact-email" placeholder="Enter email" name="_replyto">
+									</div>
+								</div>
+								<div class="form-group">
+									<label class="sr-only" for="exampleInputEmail1">Message</label>
+									<div class="input-group">
+										<div class="input-group-addon"><i class="fa fa-book"></i> </div>
+										<textarea class="form-control" rows="3" name="message" id="message" placeholder="Your message" ></textarea>
+									</div>
+								</div>
+								<button type="submit"  class="btn btn-blue btn-effect">Submit</button>
+							</form>
+                            </form>
+
+					</div>
 					<div class="col-md-5 wow animated fadeInRight">
 						<address class="contact-details">
-							<h3>Reach Us</h3>
-							<p><i class="fa fa-pencil"></i>FOSS@amrita<span>Amritapuri</span> <span>Clappana P.O, Kollam, Kerala 690525 </span><span>India</span></p><br>
-							<p><i class="fa fa-envelope"></i>conf@thinkfoss.com</p>
+							<h1>REACH US</h1>
+                            <div class="well">
+							<p>FOSS@amrita <br><span>Amritapuri,</span> <span>Clappana P.O, <br>Kollam, Kerala 690525 </span><span>India</span></p><br>
+							<p><i class="fa fa-envelope"></i> <a href="mailto:conf@thinkfoss.com">conf@thinkfoss.com</a> </p>
+                            </div>
 						</address>
 					</div>
 
