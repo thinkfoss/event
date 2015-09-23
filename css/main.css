@@ -198,6 +198,9 @@ main > section {
     background-repeat: no-repeat;
     background-size: cover;
 }
+.sec-title {
+	color:white;
+}
 
 
 /**
