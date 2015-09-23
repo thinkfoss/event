@@ -43,44 +43,6 @@
         <script src="js/modernizr-2.6.2.min.js"></script>
         <link href='http://fonts.googleapis.com/css?family=Varela+Round|Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<script>
-$(document).ready(function() {
-    $("#loginLink").click(function( event ){
-           event.preventDefault();
-           $(".overlay1").fadeToggle("fast");
-     });
-
-    $(".overlayLink").click(function(event){
-        event.preventDefault();
-        var action = $(this).attr('data-action');
-
-        $("#loginTarget").load("ajax/" + action);
-
-        $(".overlay1").fadeToggle("fast");
-    });
-
-    $(".close").click(function(){
-        $(".overlay1").fadeToggle("fast");
-    });
-
-    $(document).keyup(function(e) {
-        if(e.keyCode == 27 && $(".overlay1").css("display") != "none" ) {
-            event.preventDefault();
-            $(".overlay1").fadeToggle("fast");
-        }
-    });
-});
-</script>
-<script type="text/javascript">//<![CDATA[
-$(window).load(function(){
-var $select = $('#type');
-$('a[href="register.php"]').click(function () {
-    $select.val( $(this).data('select') );
-});
-});//]]>
-
-</script>
-
     </head>
 
     <body id="body">
